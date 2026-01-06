@@ -1,0 +1,82 @@
+{
+  "best_model_name": "hgb",
+  "best_threshold": 0.5499999999999999,
+  "best_val_balanced_accuracy": 0.7127517872535016,
+  "all_models": {
+    "logreg_balanced": {
+      "best_threshold": 0.3,
+      "val_metrics_at_best_threshold": {
+        "accuracy": 0.7397596271768457,
+        "balanced_accuracy": 0.7013968486621163,
+        "f1": 0.8071960748682536,
+        "precision": 0.7989208633093525,
+        "recall": 0.8156445097319134,
+        "positive_rate": 0.6818739269070395,
+        "roc_auc": 0.7757586097096185
+      },
+      "smoteenn_train_fold": true
+    },
+    "random_forest": {
+      "best_threshold": 0.6,
+      "val_metrics_at_best_threshold": {
+        "accuracy": 0.7002698062300712,
+        "balanced_accuracy": 0.7063657361574986,
+        "f1": 0.7541247484909458,
+        "precision": 0.8340008900756565,
+        "recall": 0.6882115313991921,
+        "positive_rate": 0.551140544518028,
+        "roc_auc": 0.7740603188224822
+      },
+      "smoteenn_train_fold": true
+    },
+    "extra_trees": {
+      "best_threshold": 0.75,
+      "val_metrics_at_best_threshold": {
+        "accuracy": 0.6701005641402993,
+        "balanced_accuracy": 0.6991897350161733,
+        "f1": 0.7126682332834864,
+        "precision": 0.8518896833503575,
+        "recall": 0.612559676827029,
+        "positive_rate": 0.4802550895266127,
+        "roc_auc": 0.7719934297854427
+      },
+      "smoteenn_train_fold": true
+    },
+    "knn_9_distance": {
+      "best_threshold": 0.6,
+      "val_metrics_at_best_threshold": {
+        "accuracy": 0.6737797400049056,
+        "balanced_accuracy": 0.6900621165182419,
+        "f1": 0.7242951907131012,
+        "precision": 0.8315088053307949,
+        "recall": 0.641571795813441,
+        "positive_rate": 0.5153298994358597,
+        "roc_auc": 0.748412234312338
+      },
+      "smoteenn_train_fold": true
+    },
+    "hgb": {
+      "best_threshold": 0.5499999999999999,
+      "val_metrics_at_best_threshold": {
+        "accuracy": 0.7137601177336277,
+        "balanced_accuracy": 0.7127517872535016,
+        "f1": 0.7695952615992103,
+        "precision": 0.832194705380017,
+        "recall": 0.7157546823356592,
+        "positive_rate": 0.5744419916605347,
+        "roc_auc": 0.7760031212858787
+      },
+      "smoteenn_train_fold": true
+    }
+  },
+  "test_metrics_with_best_threshold": {
+    "accuracy": 0.6987833594976453,
+    "balanced_accuracy": 0.7055692371372297,
+    "f1": 0.7524592807611676,
+    "precision": 0.8341079728280301,
+    "recall": 0.6853701527614571,
+    "positive_rate": 0.548861852433281,
+    "roc_auc": 0.7696387124867698
+  },
+  "note": "We optimize balanced_accuracy to avoid 'predict-all-one' behavior. Accuracy alone is misleading on imbalanced data."
+}
