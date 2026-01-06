@@ -1,0 +1,22 @@
+{
+  "status": true,
+  "train_shape": [
+    20384,
+    12
+  ],
+  "test_shape": [
+    5096,
+    12
+  ],
+  "configured_target": "CASE_STATUS",
+  "resolved_target": "case_status",
+  "target_unique_train_sample": [
+    "Certified",
+    "Denied"
+  ],
+  "duplicates": {
+    "train": 0,
+    "test": 0
+  },
+  "issues": []
+}

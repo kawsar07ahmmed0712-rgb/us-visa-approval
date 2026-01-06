@@ -2,6 +2,7 @@ import logging
 import os
 from datetime import datetime
 
+
 def get_logger(name: str) -> logging.Logger:
     log_dir = os.path.join(os.getcwd(), "artifacts", "logs")
     os.makedirs(log_dir, exist_ok=True)
@@ -13,16 +14,20 @@ def get_logger(name: str) -> logging.Logger:
     logger = logging.getLogger(name)
     logger.setLevel(logging.INFO)
 
+    # Prevent duplicate logs via root logger propagation
+    logger.propagate = False
+
+    # Add handlers only once
     if not logger.handlers:
         fmt = logging.Formatter("[%(asctime)s] %(levelname)s %(name)s - %(message)s")
 
-        file_handler = logging.FileHandler(log_file)
-        file_handler.setFormatter(fmt)
+        fh = logging.FileHandler(log_file)
+        fh.setFormatter(fmt)
 
-        stream_handler = logging.StreamHandler()
-        stream_handler.setFormatter(fmt)
+        sh = logging.StreamHandler()
+        sh.setFormatter(fmt)
 
-        logger.addHandler(file_handler)
-        logger.addHandler(stream_handler)
+        logger.addHandler(fh)
+        logger.addHandler(sh)
 
     return logger
