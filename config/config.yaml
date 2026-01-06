@@ -1,0 +1,13 @@
+dataset:
+  # Use double backslashes for Windows path
+  csv_path: "C:\\Users\\USER\\DATA-SCINCE-AI\\INCEPTION_BD_WORKSPACE\\FSDS_BOOTCAMP\\Projects\\us-visa-approval\\notebook\\visadataset.csv"
+
+training:
+  target_column: "CASE_STATUS"
+  positive_class: "CERTIFIED"
+  negative_class: "DENIED"
+  test_size: 0.2
+  random_state: 42
+
+artifacts:
+  root_dir: "artifacts"
