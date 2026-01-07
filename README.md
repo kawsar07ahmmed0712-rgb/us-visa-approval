@@ -1,6 +1,6 @@
 # US Visa Approval Prediction — End-to-End ML Pipeline (Local)
 
-````md
+
 
 An end-to-end machine learning project that predicts **US visa case outcome** (e.g., `CERTIFIED` vs `DENIED`) using a structured dataset.  
 This repository includes a full **local** ML pipeline, saved artifacts, a Flask inference API, and a React (Vite) frontend UI.
